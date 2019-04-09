@@ -10,25 +10,19 @@ class Display extends React.Component {
     };
     
     resetAll = () => {
-        console.log("The resetAll() function has been activated!");
-        
 		this.setState(({ strikes, balls }) => ({
             strikes: 0,
             balls: 0
 		}));
     }
 
-	handleStrikesChange = () => {
-        console.log("The handleClick() function has been activated!");
-        
+	handleStrikesChange = () => {     
         this.setState((prevState, { strikes }) => ({
             strikes: prevState.strikes + 1,
         }));
 	}
 
 	handleBallsChange = () => {
-		console.log("The handleClick() function has been activated!");
-
 		this.setState((prevState, { balls }) => ({
 			balls: prevState.balls + 1,
 		}));
@@ -61,34 +55,37 @@ class Display extends React.Component {
     };
 
 	strike = () => {
-        console.log("The strike() function was triggered!");
-        
         if (this.state.strikes < 2) {
+            console.log("Stttttrike", this.state.strikes +1, "!");
             this.handleStrikesChange();
         } else {
+            console.log("STRIKE 3! YOUUUUU'RE OUTTA THERE!");
             this.resetAll();
         }
 	};
 	
 	ball = () => {
-        console.log("The ball() function was triggered!");
-        
         if (this.state.balls < 3) {
+            console.log("Ball", this.state.balls +1, "!");
             this.handleBallsChange();
         } else {
+            console.log("Ball 4! Take your base, Batter!");
             this.resetAll();
         }
 	};
 
 	foul = () => {
-		console.log("The foul() function was triggered!");
-
-		this.handleStrikesChange();
-		this.handleBallsChange();
+        if (this.state.strikes < 2) {
+            console.log("FOULLLLL BALL!");
+            console.log("The 'strikes' count is:", this.state.strikes +1);
+            this.handleStrikesChange();
+        } else {
+            console.log("The strikes count stays at 2!");
+        }
 	};
 	
 	hit = () => {
-		console.log("The hit() function was triggered!");
+		console.log("We've got a hit, Ladies & Gentlemen!");
 
 		this.resetAll();
 	};
