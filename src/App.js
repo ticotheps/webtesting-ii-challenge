@@ -18,10 +18,35 @@ class App extends Component {
 				balls={this.state.balls} 
 				strikes={this.state.strikes}
 			/>
-			<Dashboard />
+			<Dashboard
+				funcStrike={this.strike}
+				funcBall={this.ball} 
+				funcFoul={this.foul} 
+				funcHit={this.hit} 
+			/>
 		</div>
 		);
-  	};
+	};
+	  
+	strike = () => {
+		console.log("The strike() function was triggered!");
+		// this.setState({});
+	};
+	
+	ball = () => {
+		console.log("The ball() function was triggered!");
+		// this.setState({});
+	};
+
+	foul = () => {
+		console.log("The foul() function was triggered!");
+		// this.setState({});
+	};
+	
+	hit = () => {
+		console.log("The hit() function was triggered!");
+		// this.setState({});
+	};
 }
 
 export default App;
