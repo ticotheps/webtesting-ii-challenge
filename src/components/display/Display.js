@@ -21,13 +21,9 @@ class Display extends React.Component {
 	handleStrikesChange = () => {
         console.log("The handleClick() function has been activated!");
         
-        if (this.state.strikes < 2) {
-            this.setState((prevState, { strikes }) => ({
-                strikes: prevState.strikes + 1,
-            }));
-        } else {
-            this.resetAll();
-        }
+        this.setState((prevState, { strikes }) => ({
+            strikes: prevState.strikes + 1,
+        }));
 	}
 
 	handleBallsChange = () => {
@@ -65,15 +61,23 @@ class Display extends React.Component {
     };
 
 	strike = () => {
-		console.log("The strike() function was triggered!");
-
-		this.handleStrikesChange();
+        console.log("The strike() function was triggered!");
+        
+        if (this.state.strikes < 2) {
+            this.handleStrikesChange();
+        } else {
+            this.resetAll();
+        }
 	};
 	
 	ball = () => {
-		console.log("The ball() function was triggered!");
-
-		this.handleBallsChange();
+        console.log("The ball() function was triggered!");
+        
+        if (this.state.balls < 3) {
+            this.handleBallsChange();
+        } else {
+            this.resetAll();
+        }
 	};
 
 	foul = () => {
