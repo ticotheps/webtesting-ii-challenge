@@ -12,7 +12,7 @@ describe("<App />", () => {
 		ReactDOM.unmountComponentAtNode(div);
 	});
 
-	it('Take Me Out to the BALLLLLLLLLLS Game!', () => {
+	it('renders take me out to the balllllllllls game', () => {
 		// const helpers = render(<App />); 
 		// the render method returns an object that gives you methods
 		// to help you find things in the DOM.
@@ -21,7 +21,7 @@ describe("<App />", () => {
 	  
 		const { getByText, queryByText, debug } = render(<App />); 
 		
-		// getByText(/hello World/i);
+		// getByText(/take me out to the balllllllllls game/i);
 		expect(queryByText(/take me out to the balllllllllls game/i)).not.toBeNull();
 	  });
 });
