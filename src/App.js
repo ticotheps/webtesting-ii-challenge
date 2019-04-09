@@ -13,7 +13,7 @@ class App extends Component {
   	render() {
 		return (
 		<div className="App">
-			<h1>Take Me Out to the BALLLLLLLLLLLLLLLLS Game!</h1>
+			<h1 className="App-title">Take Me Out to the BALLLLLLLLLLLLLLLLS Game!</h1>
 			<Display 
 				balls={this.state.balls} 
 				strikes={this.state.strikes}
