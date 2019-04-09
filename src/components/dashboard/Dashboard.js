@@ -5,10 +5,10 @@ import "../../App.css";
 function Dashboard(props) {
     return (
         <div className="Dashboard">
-          <button className="btn">Strike</button>
-          <button className="btn">Ball</button>
-          <button className="btn">Foul</button>
-          <button className="btn">Hit</button>
+          <button className="btn" onClick={props.funcStrike}>Strike</button>
+          <button className="btn" onClick={props.funcBall}>Ball</button>
+          <button className="btn" onClick={props.funcFoul}>Foul</button>
+          <button className="btn" onClick={props.funcHit}>Hit</button>
         </div>
     )
 }
