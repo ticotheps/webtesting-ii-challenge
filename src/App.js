@@ -15,6 +15,12 @@ class App extends Component {
           className="giphy-embed"
           allowFullScreen
         />
+        <div className="btn-container">
+          <button className="btn">Strike</button>
+          <button className="btn">Ball</button>
+          <button className="btn">Foul</button>
+          <button className="btn">Hit</button>
+        </div>
       </div>
     );
   }
