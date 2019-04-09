@@ -13,12 +13,7 @@ describe("<App />", () => {
 	});
 
 	it('renders take me out to the balllllllllls game', () => {
-		// const helpers = render(<App />); 
-		// the render method returns an object that gives you methods
-		// to help you find things in the DOM.
-
-		// console.log('helpers', helpers);
-	  
+	
 		const { getByText, queryByText, debug } = render(<App />); 
 		
 		// getByText(/take me out to the balllllllllls game/i);
