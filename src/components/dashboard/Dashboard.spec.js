@@ -1,10 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { render, fireEvent } from "react-testing-library";
+import { render, fireEvent, cleanup } from "react-testing-library";
 import "jest-dom/extend-expect";
 
 import Dashboard from "./Dashboard";
 import Display from "../display/Display";
+
+afterEach(cleanup);
 
 describe("<Dashboard />", () => {
     

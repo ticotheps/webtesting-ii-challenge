@@ -1,9 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { render, fireEvent } from "react-testing-library";
+import { render, cleanup } from "react-testing-library";
 import "jest-dom/extend-expect";
 
 import Display from "./Display";
+
+afterEach(cleanup);
 
 describe("<Display />", () => {
 	it("renders without crashing", () => {
