@@ -7,7 +7,16 @@ class Display extends React.Component {
 	state = {
 		strikes: 0,
 		balls: 0
-	};
+    };
+    
+    resetAll = () => {
+        console.log("The resetAll() function has been activated!");
+        
+		this.setState(({ strikes, balls }) => ({
+            strikes: 0,
+            balls: 0
+		}));
+    }
 
 	handleStrikesChange = () => {
 		console.log("The handleClick() function has been activated!");
@@ -55,13 +64,11 @@ class Display extends React.Component {
 		console.log("The strike() function was triggered!");
 
 		this.handleStrikesChange();
-		this.handleBallsChange();
 	};
 	
 	ball = () => {
 		console.log("The ball() function was triggered!");
 
-		this.handleStrikesChange();
 		this.handleBallsChange();
 	};
 
@@ -75,8 +82,7 @@ class Display extends React.Component {
 	hit = () => {
 		console.log("The hit() function was triggered!");
 
-		this.handleStrikesChange();
-		this.handleBallsChange();
+		this.resetAll();
 	};
 }
 
