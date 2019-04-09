@@ -7,9 +7,14 @@
 }
 
 .Dashboard {
+  display: flex;
   flex-direction: row;
   margin: 20px;
+}
 
+.Display {
+  display: flex;
+  flex-direction: column;
 }
 
 .btn {
@@ -25,4 +30,21 @@
   cursor: pointer;
   color: white;
   background-color: black;
+}
+
+.scoreboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.strikes, .balls {
+  color: red;
+  font-size: 50px;
+  margin: 20px 0;
+}
+
+.balls {
+  color: blue;
 }

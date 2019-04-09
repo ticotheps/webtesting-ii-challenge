@@ -6,13 +6,14 @@ import "./App.css";
 
 class App extends Component {
 	state = {
-		balls: '',
-		strikes: ''
+		balls: '0',
+		strikes: '0'
 	};
 
   	render() {
 		return (
 		<div className="App">
+			<h1>Take Me Out to the BALLLLLLLLLLLLLLLLS Game!</h1>
 			<Display 
 				balls={this.state.balls} 
 				strikes={this.state.strikes}
