@@ -13,7 +13,10 @@ class App extends Component {
   	render() {
 		return (
 		<div className="App">
-			<Display />
+			<Display 
+				balls={this.state.balls} 
+				strikes={this.state.strikes}
+			/>
 			<Dashboard />
 		</div>
 		);
