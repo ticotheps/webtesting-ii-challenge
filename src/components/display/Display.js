@@ -19,11 +19,15 @@ class Display extends React.Component {
     }
 
 	handleStrikesChange = () => {
-		console.log("The handleClick() function has been activated!");
-
-		this.setState((prevState, { strikes }) => ({
-			strikes: prevState.strikes + 1,
-		}));
+        console.log("The handleClick() function has been activated!");
+        
+        if (this.state.strikes < 2) {
+            this.setState((prevState, { strikes }) => ({
+                strikes: prevState.strikes + 1,
+            }));
+        } else {
+            this.resetAll();
+        }
 	}
 
 	handleBallsChange = () => {
